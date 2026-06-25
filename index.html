@@ -451,5 +451,9 @@
     function draw(){ ctx.clearRect(0,0,W,H); for(let h of hearts){ h.y += h.vy; h.x += h.vx; h.rot += h.vr; ctx.save(); ctx.translate(h.x, h.y); ctx.rotate(h.rot); ctx.fillStyle = `rgba(255,77,166,${h.a})`; ctx.beginPath(); let s = h.s, r = s/2; ctx.moveTo(0, r*0.35); ctx.bezierCurveTo(0, -r*0.6, -r, -r*0.2, -r, r*0.35); ctx.bezierCurveTo(-r, r*1.1, 0, r*1.2, 0, r*1.75); ctx.bezierCurveTo(0, r*1.2, r, r*1.1, r, r*0.35); ctx.bezierCurveTo(r, -r*0.2, 0, -r*0.6, 0, r*0.35); ctx.fill(); ctx.restore(); if(h.y > H+20) h.y = -20; } requestAnimationFrame(draw); }
     setInterval(spawn, 300); draw();
   </script>
+<script>
+  window.HEARTLINK_GIFT_ID = "gift-po";
+</script>
+<script src="https://cdn.jsdelivr.net/gh/HeartLink349/Heart_Link@heartlink-lock-system/heartlink-lock.js"></script>
 </body>
 </html>
